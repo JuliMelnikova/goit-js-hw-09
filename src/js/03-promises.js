@@ -13,7 +13,7 @@ form.addEventListener("submit", (event) => {
   let step = Number(delayStep.value);
   let amountValue = Number(amount.value);
 
-  for(let i = 1; i <= amountValue; i += 1) {
+  for(let i = 0; i <= amountValue; i += 1) {
     let delayPromise = delayFirst + step * i;
     createPromise(i, delayPromise)
     .then(({ position, delay }) => {
